@@ -24,7 +24,7 @@ public class CourseWFlowTest extends TestBase {
 	public void Create_And_SaveAsDraftCourse()
 
 	{
-		/*courseObj = new CoursePage(driver);
+		courseObj = new CoursePage(driver);
 
 		loginObject.click_On_btnLogin();
 		courseObj.OpenMyCoursesList();
@@ -33,7 +33,7 @@ public class CourseWFlowTest extends TestBase {
 		courseObj.Select_drpGrade();
 		courseObj.click_On_teacherOnBehalf();
 		courseObj.click_On_btnSaveAsDraftCourse();
-		courseObj.courseNameView("Test");*/
+		courseObj.courseNameView("Test");
 
 	}
 
@@ -44,7 +44,7 @@ public class CourseWFlowTest extends TestBase {
 
 		
 		courseObj = new CoursePage(driver);
-		courseObj.test();
+	
 
 
 	}
