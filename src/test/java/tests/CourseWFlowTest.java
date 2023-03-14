@@ -18,6 +18,8 @@ public class CourseWFlowTest extends TestBase {
 		loginObject = new LoginPage(driver);
 		loginObject.enter_email("testregister@aaa.com");
 		loginObject.enter_Password_Txt("Wakram_123");
+		System.out.println("Login Passed ");
+
 	}
 
 	@Test(priority = 0)
@@ -29,23 +31,12 @@ public class CourseWFlowTest extends TestBase {
 		loginObject.click_On_btnLogin();
 		courseObj.OpenMyCoursesList();
 		courseObj.click_On_btnAddCourse();
-		courseObj.enter_CourseName("Test");
+		courseObj.enter_CourseName("googleCourse");
 		courseObj.Select_drpGrade();
 		courseObj.click_On_teacherOnBehalf();
 		courseObj.click_On_btnSaveAsDraftCourse();
-		courseObj.courseNameView("Test");
-
-	}
-
-	@Test(priority = 0)
-	public void Assert_course_title_is_displayed()
-
-	{
-
-		
-		courseObj = new CoursePage(driver);
-	
-
+		String ExpectedTitle = "googleCourse";
+		courseObj.verifytcourseNameTitle(ExpectedTitle);
 
 	}
 

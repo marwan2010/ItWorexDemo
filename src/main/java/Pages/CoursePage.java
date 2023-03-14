@@ -15,7 +15,6 @@ public class CoursePage extends PagesBase {
 		// TODO Auto-generated constructor stub
 	}
 
-	
 	@FindBy(id = "btnMyCoursesList")
 	WebElement btnMyCoursesList;
 
@@ -38,12 +37,9 @@ public class CoursePage extends PagesBase {
 
 	@FindBy(id = "btnSaveAsDraftCourse")
 	WebElement btnSaveAsDraftCourse;
-	
+
 	@FindBy(id = "courseNameView")
 	WebElement courseNameView;
-
-
-
 
 	public void OpenMyCoursesList()
 
@@ -92,56 +88,36 @@ public class CoursePage extends PagesBase {
 		input_search.sendKeys(Keys.ENTER);
 
 	}
-	
 
 	public void click_On_ScrollDown()
 
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,500)", "");
-	
 
 	}
-
 
 	public void click_On_btnSaveAsDraftCourse()
 
 	{
-		
+
 		clickButton(btnSaveAsDraftCourse);
 
 	}
-	
-	public void courseNameView(String value)
+
+	public void verifytcourseNameTitle(String ExpectedTitle)
 
 	{
-	String ExpectedText =value;
 
-	{Assert.assertEquals(ExpectedText, courseNameView.getText());
-	System.out.println(" text is a expected – Assert passed");
+		{
+			
+			Assert.assertEquals(courseNameView.getText(),ExpectedTitle);
 
-		
-	}
+			System.out.println(" Title is a expected – Assert passed");
+
+		}
 	
-	}
-	
 
-	public void test ()
-	{
-		
-			int n = 0;
-			while( n <=10)
-			{
-				int a =n+2;
-				int b =a+n;
-				System.out.println("a = "+a);
-				n=5;
-				
-			}
-		
-		
 	}
-
-	
 
 }
